@@ -1,0 +1,7 @@
+### Test 1: Get ALL Contacts
+GET http://localhost:8080/contacts
+
+###
+
+### Test 2: Get a SINGLE Contact (Replace with a real ID from your database)
+GET http://localhost:8080/contacts/6a47c9f4212149a8d9bd2779
