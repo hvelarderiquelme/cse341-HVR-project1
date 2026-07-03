@@ -1,0 +1,7 @@
+### Test 1: Get ALL Contacts
+GET http://localhost:8080/contacts
+
+###
+
+### Test 2: Get a SINGLE Contact 
+GET http://localhost:8080/contacts/6a47ca28212149a8d9bd277d
