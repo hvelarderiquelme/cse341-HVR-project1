@@ -7,4 +7,44 @@ GET http://localhost:8080/contacts
 ###
 
 ### Test 3: Get a SINGLE Contact 
-GET http://localhost:8080/contacts/6a47ca14212149a8d9bd277b
+GET http://localhost:8080/contacts/6a4de7317d7951cfe0d941cd
+
+### Test 4: Create a New Contact (Success Case)
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "email": "alice.j@example.com",
+    "favoriteColor": "blue",
+    "birthday": "1994-08-22"
+}
+
+### Test 5: Create a New Contact (Failure Case - Missing Field)
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "email": "bob.smith@example.com",
+    "favoriteColor": "orange",
+    "birthday": "1990-01-01"
+}
+
+### Test 6: update existing Contact
+PUT http://localhost:8080/contacts/6a4de7547d7951cfe0d941ce
+Content-Type: application/json
+
+{
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "email": "bob.smith@example.com",
+    "favoriteColor": "green",
+    "birthday": "1990-01-01"
+}
+
+### Test 7: delete existing Contact
+DELETE http://localhost:8080/contacts/6a4de7547d7951cfe0d941ce
+
