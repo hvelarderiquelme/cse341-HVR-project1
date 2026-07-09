@@ -32,11 +32,12 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:8080', // my active port
+        url: '/', // my active port
+        description: 'Current enviroment',
       },
     ],
   },
-  apis: ['./routes/contacts.js'], // Points to your routes folder. Adjust if your folder setup is different!
+  apis: ['./routes/*.js'], // Points to your routes folder. Adjust if your folder setup is different!
 };
 
 const swaggerDocs = swaggerJsdoc(swaggerOptions);

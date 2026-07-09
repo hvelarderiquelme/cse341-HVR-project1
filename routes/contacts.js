@@ -238,7 +238,7 @@ router.put('/contacts/:id', async(req,res) => {
 });
 
 /**************************************************************************
- * **************************  PUT ROUTES*********************************
+ * **************************  DELETE ROUTES*********************************
  * ************************************************************************/
 /**
  * @openapi
@@ -277,7 +277,7 @@ router.delete('/contacts/:id', async(req,res) => {
             return res.status(404).json({error: 'Contact not found'});
         }
         //returns 200 sucess message
-        return res.status(200).json({ message: 'Contact deelted successfully.' }); 
+        return res.status(200).json({ message: 'Contact deleted successfully.' }); 
     } catch(error) {
         return res.status(500).json({error: 'Database saving failed.', details: error.message})
     }
